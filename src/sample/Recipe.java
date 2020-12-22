@@ -29,6 +29,10 @@ public class Recipe {
         return ingredients;
     }
 
+    public void showApproach () {
+        System.out.println("- " + approach);
+    }
+
 
     public String getName() {
         return name;

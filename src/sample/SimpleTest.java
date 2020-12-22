@@ -11,13 +11,13 @@ public class SimpleTest {
     public static void main(String[] args) {
         System.out.println("Welcome to my recipe-application-dummy");
 
-        Recipe icingRecipe = new Recipe("Icing","Steps",2,5);
+        Recipe icingRecipe = new Recipe("Icing","Mix all ingredients",2,5);
         Ingredient powderedSugar = new Ingredient("Powdered sugar",400);
         Ingredient water1 = new Ingredient("Water",0);
         icingRecipe.addIngredient(powderedSugar);
         icingRecipe.addIngredient(water1);
         blankLine();
-        Recipe teaRecipe = new Recipe("Tea","Steps",1,5);
+        Recipe teaRecipe = new Recipe("Tea","Let tea rest in hot water for 2 minutes and add lemon juice",1,5);
         Ingredient tea = new Ingredient("Tea",0);
         Ingredient water2 = new Ingredient("Water",0);
         Ingredient lemon = new Ingredient("Lemon",0);
@@ -32,12 +32,20 @@ public class SimpleTest {
             Ingredient currentIngredient = (Ingredient) icingRecipe.showIngredients().get(i);
             System.out.println("- " + currentIngredient.getName());
         }
+
+        System.out.println("Recipe for " + icingRecipe.getName() + ":");
+        icingRecipe.showApproach();
+
         blankLine();
+
         System.out.println("For " + teaRecipe.getName() + " you'll need: ");
         for (int i = 0; i < teaRecipe.showIngredients().size(); i++) {
             Ingredient currentIngredient = (Ingredient) teaRecipe.showIngredients().get(i);
             System.out.println("- " + currentIngredient.getName());
         }
+
+        System.out.println("Recipe for " + teaRecipe.getName() + ":");
+        teaRecipe.showApproach();
     }
 
 
