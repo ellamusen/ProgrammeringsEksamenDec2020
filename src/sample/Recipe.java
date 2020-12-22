@@ -1,6 +1,6 @@
 package sample;
 
-import java.util.List;
+import java.util.ArrayList;
 
 public class Recipe {
 
@@ -8,6 +8,7 @@ public class Recipe {
     private String approach;
     private int servings;
     private int timeInMinutes;
+    private ArrayList<Ingredient> ingredients = new ArrayList<Ingredient>();
 
 
     public Recipe(String name, String approach, int servings, int timeInMinutes) {
@@ -18,6 +19,16 @@ public class Recipe {
 
         System.out.println("Recipe has been added: " + name);
     }
+
+
+    public void addIngredient(Ingredient ingredient){
+        ingredients.add(ingredient);
+    }
+
+    public ArrayList showIngredients() {
+        return ingredients;
+    }
+
 
     public String getName() {
         return name;
