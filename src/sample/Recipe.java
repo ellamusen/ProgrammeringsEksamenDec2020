@@ -1,15 +1,17 @@
 package sample;
 
+import java.util.List;
+
 public class Recipe {
 
     private String name;
     private String approach;
     private int servings;
     private int timeInMinutes;
-    private String ingredients;
+    private List<Ingredient> ingredients;
 
 
-    public Recipe(String name, String approach, int servings, int timeInMinutes, String ingredients) {
+    public Recipe(String name, String approach, int servings, int timeInMinutes, List<Ingredient> ingredients) {
         this.name = name;
         this.approach = approach;
         this.servings = servings;
@@ -18,7 +20,6 @@ public class Recipe {
 
         System.out.println("Recipe has been added: " + name);
     }
-
 
     public String getName() {
         return name;
@@ -52,11 +53,11 @@ public class Recipe {
         this.timeInMinutes = timeInMinutes;
     }
 
-    public String getIngredients() {
+    public List<Ingredient> getIngredients() {
         return ingredients;
     }
 
-    public void setIngredients(String ingredients) {
+    public void setIngredients(List<Ingredient> ingredients) {
         this.ingredients = ingredients;
     }
 }
