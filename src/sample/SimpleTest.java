@@ -27,24 +27,12 @@ public class SimpleTest {
 
         blankLine();
 
-        System.out.println("For " + icingRecipe.getName() + " you'll need: ");
-        for (int i = 0; i < icingRecipe.showIngredients().size(); i++) {
-            Ingredient currentIngredient = (Ingredient) icingRecipe.showIngredients().get(i);
-            System.out.println("- " + currentIngredient.getName());
-        }
-
-        System.out.println("Recipe for " + icingRecipe.getName() + ":");
+        icingRecipe.showIngredients();
         icingRecipe.showApproach();
 
         blankLine();
 
-        System.out.println("For " + teaRecipe.getName() + " you'll need: ");
-        for (int i = 0; i < teaRecipe.showIngredients().size(); i++) {
-            Ingredient currentIngredient = (Ingredient) teaRecipe.showIngredients().get(i);
-            System.out.println("- " + currentIngredient.getName());
-        }
-
-        System.out.println("Recipe for " + teaRecipe.getName() + ":");
+        teaRecipe.showIngredients();
         teaRecipe.showApproach();
     }
 

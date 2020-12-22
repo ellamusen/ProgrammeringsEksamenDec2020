@@ -25,12 +25,17 @@ public class Recipe {
         ingredients.add(ingredient);
     }
 
-    public ArrayList showIngredients() {
-        return ingredients;
+    public void showIngredients() {
+        System.out.println("For " + this.name + " you'll need: ");
+        for (int i = 0; i < this.ingredients.size(); i++) {
+            Ingredient currentIngredient = this.ingredients.get(i);
+            System.out.println("- " + currentIngredient.getName());
+        }
     }
 
     public void showApproach () {
-        System.out.println("- " + approach);
+        System.out.println("Recipe for " + this.name + ":");
+        System.out.println("- " + this.approach);
     }
 
 
