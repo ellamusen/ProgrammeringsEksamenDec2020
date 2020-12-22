@@ -11,7 +11,7 @@ public class SimpleTest {
     public static void main(String[] args) {
         System.out.println("Welcome to my recipe-application-dummy");
 
-        Recipe icingRecipe = new Recipe("Icing", "Mix all ingredients", 2, 5);
+        Recipe icingRecipe = new Recipe("Icing", "Mix all ingredients", 0, 5);
         Ingredient powderedSugar = new Ingredient("Powdered sugar", 400);
         Ingredient water1 = new Ingredient("Water", 0);
         icingRecipe.addIngredient(powderedSugar);
@@ -42,14 +42,20 @@ public class SimpleTest {
 
         NutritionDetails orange = new NutritionDetails("Orange",5,6,2,5);
         NutritionDetails horse = new NutritionDetails("Horse",1000,1,2,3);
+
         blankLine();
+
         orange.preventsCold();
         horse.preventsCold();
+
         blankLine();
+
         water1.totalCalories();
         teaRecipe.totalCalories();
 
+        blankLine();
 
+        icingRecipe.caloriesPerPortion();
     }
 
 
