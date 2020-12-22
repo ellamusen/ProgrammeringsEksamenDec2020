@@ -8,15 +8,13 @@ public class Recipe {
     private String approach;
     private int servings;
     private int timeInMinutes;
-    private List<Ingredient> ingredients;
 
 
-    public Recipe(String name, String approach, int servings, int timeInMinutes, List<Ingredient> ingredients) {
+    public Recipe(String name, String approach, int servings, int timeInMinutes) {
         this.name = name;
         this.approach = approach;
         this.servings = servings;
         this.timeInMinutes = timeInMinutes;
-        this.ingredients = ingredients;
 
         System.out.println("Recipe has been added: " + name);
     }
@@ -51,13 +49,5 @@ public class Recipe {
 
     public void setTimeInMinutes(int timeInMinutes) {
         this.timeInMinutes = timeInMinutes;
-    }
-
-    public List<Ingredient> getIngredients() {
-        return ingredients;
-    }
-
-    public void setIngredients(List<Ingredient> ingredients) {
-        this.ingredients = ingredients;
     }
 }
