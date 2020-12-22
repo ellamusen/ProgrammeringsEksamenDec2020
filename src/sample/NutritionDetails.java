@@ -12,4 +12,16 @@ public class NutritionDetails extends Ingredient {
         this.magnesium = magnesium;
         this.calcium = calcium;
     }
+
+    public boolean preventsCold() {
+        if (this.cVitamin > 5) {
+            System.out.println(super.getName() + " is great against a cold");
+            return true;
+        }
+        else {
+            System.out.println(super.getName() + " is not great against a cold");
+            return false;
+        }
+    }
+
 }

@@ -38,6 +38,14 @@ public class SimpleTest {
         lemon.richOnCalories();
         powderedSugar.richOnCalories();
 
+        blankLine();
+
+        NutritionDetails orange = new NutritionDetails("Orange",5,6,2,5);
+        NutritionDetails horse = new NutritionDetails("Horse",1000,1,2,3);
+        blankLine();
+        orange.preventsCold();
+        horse.preventsCold();
+
 
     }
 
