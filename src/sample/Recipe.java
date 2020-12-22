@@ -85,4 +85,14 @@ public class Recipe implements CalorieCalculator {
         System.out.println("Recipe " + this.name + " contains " + total + " calories");
         return total;
     }
+
+    public int caloriesPerPortion() {
+        try {
+            return totalCalories() / this.servings;
+
+        } catch (Exception exception) {
+            System.out.println("ERROR - " + this.name + " needs to have at least 1 serving");
+        }
+        return 0;
+    }
 }
