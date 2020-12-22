@@ -9,6 +9,17 @@ public class Recipe {
     private String ingredients;
 
 
+    public Recipe(String name, String approach, int servings, int timeInMinutes, String ingredients) {
+        this.name = name;
+        this.approach = approach;
+        this.servings = servings;
+        this.timeInMinutes = timeInMinutes;
+        this.ingredients = ingredients;
+
+        System.out.println("Recipe has been added: " + name);
+    }
+
+
     public String getName() {
         return name;
     }

@@ -6,6 +6,14 @@ public class Ingredient {
     private int calories;
 
 
+    public Ingredient(String name, int calories) {
+        this.name = name;
+        this.calories = calories;
+
+        System.out.println("Ingredient has been added: " + name);
+    }
+
+
     public String getName() {
         return name;
     }
