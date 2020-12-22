@@ -5,6 +5,9 @@ public class Ingredient {
     private String name;
     private int calories;
 
+    public Ingredient(){
+
+    }
 
     public Ingredient(String name, int calories) {
         this.name = name;
