@@ -1,6 +1,6 @@
 package sample;
 
-public class Ingredient {
+public class Ingredient implements CalorieCalculator{
 
     private String name;
     private int calories;
@@ -42,5 +42,11 @@ public class Ingredient {
 
     public void setCalories(int calories) {
         this.calories = calories;
+    }
+
+    @Override
+    public int totalCalories() {
+        System.out.println(this.name + " has a total of " + this.calories + " calories");
+        return this.calories;
     }
 }

@@ -20,7 +20,7 @@ public class SimpleTest {
         Recipe teaRecipe = new Recipe("Tea", "Let tea rest in hot water for 2 minutes and add lemon juice", 1, 5);
         Ingredient tea = new Ingredient("Tea", 0);
         Ingredient water2 = new Ingredient("Water", 0);
-        Ingredient lemon = new Ingredient("Lemon", 0);
+        Ingredient lemon = new Ingredient("Lemon", 11);
         teaRecipe.addIngredient(tea);
         teaRecipe.addIngredient(water2);
         teaRecipe.addIngredient(lemon);
@@ -45,6 +45,9 @@ public class SimpleTest {
         blankLine();
         orange.preventsCold();
         horse.preventsCold();
+        blankLine();
+        water1.totalCalories();
+        teaRecipe.totalCalories();
 
 
     }

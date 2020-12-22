@@ -2,7 +2,7 @@ package sample;
 
 import java.util.ArrayList;
 
-public class Recipe {
+public class Recipe implements CalorieCalculator {
 
     private String name;
     private String approach;
@@ -74,5 +74,15 @@ public class Recipe {
 
     public void setTimeInMinutes(int timeInMinutes) {
         this.timeInMinutes = timeInMinutes;
+    }
+
+    @Override
+    public int totalCalories() {
+        int total = 0;
+        for (int i = 0; i < this.ingredients.size(); i++) {
+            total += this.ingredients.get(i).getCalories();
+        }
+        System.out.println("Recipe " + this.name + " contains " + total + " calories");
+        return total;
     }
 }
