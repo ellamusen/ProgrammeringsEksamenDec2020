@@ -13,6 +13,17 @@ public class Ingredient {
         System.out.println("Ingredient has been added: " + name);
     }
 
+    public boolean richOnCalories() {
+        if (this.calories > 100) {
+            System.out.println(this.name + " is rich on calories");
+            return true;
+        }
+        else {
+            System.out.println(this.name + " is not rich on calories");
+            return false;
+        }
+    }
+
 
     public String getName() {
         return name;
