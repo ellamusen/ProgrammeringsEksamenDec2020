@@ -38,6 +38,11 @@ public class Recipe {
         System.out.println("- " + this.approach);
     }
 
+    public void showRecipe() {
+        this.showIngredients();
+        this.showApproach();
+    }
+
 
     public String getName() {
         return name;

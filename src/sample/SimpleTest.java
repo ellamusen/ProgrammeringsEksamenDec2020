@@ -27,13 +27,11 @@ public class SimpleTest {
 
         blankLine();
 
-        icingRecipe.showIngredients();
-        icingRecipe.showApproach();
+       icingRecipe.showRecipe();
 
         blankLine();
 
-        teaRecipe.showIngredients();
-        teaRecipe.showApproach();
+        teaRecipe.showRecipe();
     }
 
 
